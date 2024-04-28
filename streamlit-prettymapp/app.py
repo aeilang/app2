@@ -51,10 +51,11 @@ result_container = st.empty()
 with st.spinner("正在制作地图，可能需要1分钟"):
     try:
         result = translator.translate(address, dest='en')
+        print(result)
         aoi = get_aoi(address=result, radius=1500, rectangular=False)
     except:
         st.error(f"地名错误，请更换地名")
-        st.stop()
+        # st.stop()
     df = st_get_osm_geometries(aoi=aoi)
     config = {
         "aoi_bounds": aoi.bounds,
