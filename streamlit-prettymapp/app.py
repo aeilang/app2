@@ -54,7 +54,7 @@ with st.spinner("正在制作地图，可能需要1分钟"):
         print(result)
         aoi = get_aoi(address=result, radius=1500, rectangular=False)
     except:
-        st.error(f"地名错误，请更换地名")
+        st.error(f"地名错误，请更换地名 {result}")
         # st.stop()
     df = st_get_osm_geometries(aoi=aoi)
     config = {
