@@ -9,4 +9,4 @@ pytest-mypy
 mypy==1.9.0
 mypy-extensions
 twine
-googletrans
+googletrans==4.0.0-rc1

@@ -43,13 +43,14 @@ address = col1.text_input(
 draw_settings = copy.deepcopy(STYLES["Peach"])
 
 
-translator = Translator()
+
 
 form.form_submit_button(label="提交")
 
 
 result_container = st.empty()
 with st.spinner("正在制作地图，可能需要1分钟"):
+    translator = Translator()
     result = translator.translate(address, dest='en')
     try:
         aoi = get_aoi(address=result, radius=1500, rectangular=False)
