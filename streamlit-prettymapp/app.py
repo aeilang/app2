@@ -47,11 +47,11 @@ translator = Translator()
 
 form.form_submit_button(label="提交")
 
+
 result_container = st.empty()
 with st.spinner("正在制作地图，可能需要1分钟"):
+    result = translator.translate(address, dest='en')
     try:
-        result = translator.translate(address, dest='en')
-        print(result)
         aoi = get_aoi(address=result, radius=1500, rectangular=False)
     except:
         st.error(f"地名错误，请更换地名 {result}")
