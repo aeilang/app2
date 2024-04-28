@@ -4,19 +4,19 @@ from setuptools import setup, find_packages
 parent_dir = Path(__file__).resolve().parent
 
 setup(
-    name="prettymapp",
+    name="prettymappl",
     version="0.3.0",
     author="Christoph Rieke",
-    author_email="christoph.k.rieke@gmail.com",
+    author_email="jingyifsy@gmail.com",
     description="",
     long_description=parent_dir.joinpath("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
-    url="https://github.com/chrieke/prettymapp",
+    url="https://github.com/chrieke/prettymappl",
     license="MIT",
     packages=find_packages(
         exclude=("prettymapp/tests", "streamlit-prettymapp", "cache")
     ),
-    package_data={"": ["fonts/PermanentMarker-Regular.ttf"]},
+    package_data={"": ["HongLeiXingShuJianTi-2.otf"]},
     data_files=[
         ("", ["requirements.txt"]),
     ],
