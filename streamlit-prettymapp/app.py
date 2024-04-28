@@ -43,8 +43,6 @@ address = col1.text_input(
 draw_settings = copy.deepcopy(STYLES["Peach"])
 
 
-
-
 form.form_submit_button(label="提交")
 
 
@@ -53,7 +51,7 @@ with st.spinner("正在制作地图，可能需要1分钟"):
     translator = Translator()
     result = translator.translate(address, dest='en')
     try:
-        aoi = get_aoi(address=result, radius=1500, rectangular=False)
+        aoi = get_aoi(address=result.text, radius=1500, rectangular=False)
     except:
         st.error(f"地名错误，请更换地名 {result}")
         # st.stop()
