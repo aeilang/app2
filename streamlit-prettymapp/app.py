@@ -42,19 +42,19 @@ address = col1.text_input(
 
 draw_settings = copy.deepcopy(STYLES["Peach"])
 
-
+translator = Translator()
 form.form_submit_button(label="提交")
+
 
 
 result_container = st.empty()
 with st.spinner("正在制作地图，可能需要1分钟"):
-    translator = Translator()
     result = translator.translate(address, dest='en')
     try:
         aoi = get_aoi(address=result.text, radius=1500, rectangular=False)
     except:
-        st.error(f"地名错误，请更换地名 {result}")
-        # st.stop()
+        st.error(f"地名错误，请更换地名 {result.text}")
+        st.stop()
     df = st_get_osm_geometries(aoi=aoi)
     config = {
         "aoi_bounds": aoi.bounds,
