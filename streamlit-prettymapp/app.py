@@ -6,7 +6,7 @@ from googletrans import Translator
 import random
 import pandas as pd
 
-city = pd.read_csv("univercity.csv")
+city = pd.read_csv("./streamlit-prettymapp/univercity.csv")
 
 from utils import (
     st_get_osm_geometries,
