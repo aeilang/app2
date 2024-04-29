@@ -40,10 +40,11 @@ address = col1.text_input(
     key="address",
 )
 
+
 draw_settings = copy.deepcopy(STYLES["Peach"])
 
 translator = Translator()
-form.form_submit_button(label="提交")
+col3.form_submit_button(label="提交")
 
 
 
@@ -59,7 +60,7 @@ with st.spinner("正在制作地图，可能需要1分钟"):
     config = {
         "aoi_bounds": aoi.bounds,
         "draw_settings": draw_settings,
-        "name_on": True,
+        "name_on": False,
         "name": address,
         "font_size": 25,
         "font_color": "#2F3737",
