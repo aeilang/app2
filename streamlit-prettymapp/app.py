@@ -36,8 +36,7 @@ if not st.session_state:
 
 
 st.write("")
-form = st.form(key="form_settings")
-col1, col2, col3 = form.columns([3, 1, 1])
+col1, col2, col3 = st.columns([3, 1, 1])
 name = EXAMPLES["Macau"]["address"]
 
 def repeat(name):
