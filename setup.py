@@ -16,7 +16,7 @@ setup(
     packages=find_packages(
         exclude=("prettymapp/tests", "streamlit-prettymapp", "cache")
     ),
-    package_data={"": ["HongLeiXingShuJianTi-2.otf"]},
+    package_data={"": ["PermanentMarker-Regular.ttf"]},
     data_files=[
         ("", ["requirements.txt"]),
     ],
