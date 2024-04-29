@@ -63,7 +63,7 @@ def repeat(name):
             "aoi_bounds": aoi.bounds,
             "draw_settings": draw_settings,
             "name_on": False,
-            "name": address,
+            "name": name,
             "font_size": 25,
             "font_color": "#2F3737",
             "text_x": 19,
