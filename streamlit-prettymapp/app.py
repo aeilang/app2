@@ -40,7 +40,7 @@ form = st.form(key="form_settings")
 col1, col2, col3 = form.columns([3, 1, 1])
 name = EXAMPLES["Macau"]["address"]
 
-def repeat():
+def repeat(name):
     address = col1.text_input(
     "请输入地名",
     key="address",
@@ -88,8 +88,9 @@ def repeat():
     random_number = random.randint(1, 140)
     name = city['unuversity'][random_number-1]
     name = name.strip()
+    return name
     
     
 
 while True:
-    repeat()
+    name = repeat(name=name)
