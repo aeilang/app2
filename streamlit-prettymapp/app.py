@@ -41,8 +41,8 @@ name = EXAMPLES["Macau"]["address"]
 
 def repeat(name):
     
-    col1.write(name)
-    col2.write("提交")
+    col1.button(name)
+    col2.button("提交")
 
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
