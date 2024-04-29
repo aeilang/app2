@@ -43,8 +43,8 @@ name = EXAMPLES["Macau"]["address"]
 def repeat(name):
     address = col1.text_input(
     "请输入地名",
-    key="address",
-    value=name)
+    key="address")
+    col1.Write(name)
 
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
@@ -54,7 +54,7 @@ def repeat(name):
     result_container = st.empty()
     # fine
     with st.spinner("正在制作地图，可能需要1分钟"):
-        result = translator.translate(address, dest='en')
+        result = translator.translate(name, dest='en')
         try:
             aoi = get_aoi(address=result.text, radius=1100, rectangular=False)
         except:
