@@ -38,21 +38,21 @@ if not st.session_state:
 st.write("")
 form = st.form(key="form_settings")
 col1, col2, col3 = form.columns([3, 1, 1])
+name = EXAMPLES["Macau"]["address"]
 
 def repeat():
     address = col1.text_input(
     "请输入地名",
     key="address",
-    value=name
-    )
+    value=name)
+
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
     translator = Translator()
     col2.form_submit_button(label="提交")
 
-
-
     result_container = st.empty()
+    # fine
     with st.spinner("正在制作地图，可能需要1分钟"):
         result = translator.translate(address, dest='en')
         try:
