@@ -36,7 +36,7 @@ form = st.form(key="form_settings")
 col1, col2, col3 = form.columns([3, 1, 1])
 
 address = col1.text_input(
-    "地址",
+    "请输入地名",
     key="address",
 )
 
