@@ -41,10 +41,8 @@ col1, col2, col3 = form.columns([3, 1, 1])
 name = EXAMPLES["Macau"]["address"]
 
 def repeat(name):
-    address = col1.text_input(
-    "请输入地名",
-    key="address")
-    col1.Write(name)
+    
+    st.Write(name)
 
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
