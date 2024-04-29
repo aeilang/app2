@@ -87,7 +87,9 @@ def repeat():
     random_number = random.randint(1, 140)
     name = city['unuversity'][random_number-1]
     name = name.strip()
-    st.session_state["address"] = name
+    EXAMPLES["Macau"]["address"] = name
+    st.session_state.update(EXAMPLES["Macau"])
+    
 
 while True:
     repeat()
