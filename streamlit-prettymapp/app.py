@@ -42,12 +42,12 @@ name = EXAMPLES["Macau"]["address"]
 
 def repeat(name):
     
-    st.write(name)
+    col1.write(name)
+    col2.write("提交")
 
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
     translator = Translator()
-    col2.form_submit_button(label="提交")
 
     result_container = st.empty()
     # fine
