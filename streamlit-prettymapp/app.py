@@ -43,6 +43,7 @@ def repeat():
     address = col1.text_input(
     "请输入地名",
     key="address",
+    value=name
     )
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
@@ -87,8 +88,7 @@ def repeat():
     random_number = random.randint(1, 140)
     name = city['unuversity'][random_number-1]
     name = name.strip()
-    EXAMPLES["Macau"]["address"] = name
-    st.session_state.update(EXAMPLES["Macau"])
+    
     
 
 while True:
