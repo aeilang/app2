@@ -42,7 +42,7 @@ name = EXAMPLES["Macau"]["address"]
 
 def repeat(name):
     
-    st.Write(name)
+    st.write(name)
 
     draw_settings = copy.deepcopy(STYLES["Peach"])
 
